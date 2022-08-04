@@ -1,0 +1,50 @@
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content below * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * Delete the template below * * * * * * * * * * -->
+<!-- * * * * * * * to get started with your project! * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<style>
+.header { background-color: #44be44;
+  opacity: 0.6;
+  text-align: center;
+  color:whitesmoke;
+
+}
+.design
+{
+text-align: center;
+}
+.center {
+  margin: auto;
+  width: 50%;
+  border: 3px white;
+  padding: 10px;
+}
+</style>
+<h1 class="header">To do list</h1>
+<br>
+<br>
+<div class="center">
+<input  [(ngModel)]="taskValue" type="text" placeholder="Enter new task" class="design" >
+<button type="button" (click)="addTask();">Add task</button>
+</div>
+<br>
+<br>
+<br>
+<br>
+<ul *ngFor="let item of list">
+<li>{{item.name}}   <button (click)="removeTask(item.id)">Delete task</button></li>
+</ul>
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
+<!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
+<!-- * * * * * * * * * * and can be replaced. * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+<!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
+<!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
+
+<router-outlet></router-outlet>
